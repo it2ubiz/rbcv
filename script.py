@@ -148,12 +148,14 @@ def video_blink(file):
                         # check to see if an alarm file was supplied,
                         # and if so, start a thread to have the alarm
                         # sound played in the background
+                        '''
                         if args["alarm"] != "":
                             t = Thread(target=sound_alarm,
                                 args=(args["alarm"],))
                             t.deamon = True
                             t.start()
-                        print ("Alert")
+                        '''
+                    print ("Alert")
                         al = 1
                     # draw an alarm on the frame
                         #cv2.putText(frame, "DROWSINESS ALERT!", (10, 30),
