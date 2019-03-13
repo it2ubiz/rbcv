@@ -1,6 +1,6 @@
 import cv2
 import dlib
-import pandas as import pd
+import pandas as pd
 import numpy as np
 
 print ("OpenCV version",cv2.__version__)
