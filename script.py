@@ -187,9 +187,9 @@ def video_blink(file):
     return
 
 import os
-d = os.listdir("Примеры_Антисон")
+d = os.listdir("video")
 #summary = {}
 #summary_1 = {}
 for file in d:
     print(file)
-    video_blink('./Примеры_Антисон/' + file)
+    video_blink('./video/' + file)
