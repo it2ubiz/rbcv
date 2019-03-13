@@ -35,7 +35,7 @@ def eye_aspect_ratio(eye):
 
 
 ap = {}
-ap['shape_predictor'] = 'shape_predictor_68_face_landmarks.dat'
+ap['shape_predictor'] = '/var/tander/rbcv/model/dlib-models/shape_predictor_68_face_landmarks.dat'
 #args = vars(ap.parse_args())
 ap['alarm'] = 'WOWSENSOR-HIT.wav'
 args = ap 
@@ -153,12 +153,13 @@ def video_blink(file):
                                 args=(args["alarm"],))
                             t.deamon = True
                             t.start()
-
-                    # draw an alarm on the frame
-                        cv2.putText(frame, "DROWSINESS ALERT!", (10, 30),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-                        
+                        print ("Alert")
                         al = 1
+                    # draw an alarm on the frame
+                        #cv2.putText(frame, "DROWSINESS ALERT!", (10, 30),
+                        #cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+                        
+                        #al = 1
 
             # otherwise, the eye aspect ratio is not below the blink
             # threshold, so reset the counter and alarm
@@ -174,7 +175,7 @@ def video_blink(file):
             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
             ear_sum.append(ear)
         # show the frame
-        cv2.imshow("Frame", frame)
+        #cv2.imshow("Frame", frame)
         key = cv2.waitKey(1) & 0xFF
 
         # if the `q` key was pressed, break from the loop
