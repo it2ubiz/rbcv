@@ -27,7 +27,7 @@ def eye_aspect_ratio(eye):
     C = dist.euclidean(eye[0], eye[3])
 
     # compute the eye aspect ratio
-    ear = (A + B)# / (2.0 * C)
+    ear = (A + B) / (2.0 * C)
     
     
     # return the eye aspect ratio
@@ -43,8 +43,8 @@ args = ap
 # define two constants, one for the eye aspect ratio to indicate
 # blink and then a second constant for the number of consecutive
 # frames the eye must be below the threshold
-EYE_AR_THRESH = 0.3
-EYE_AR_CONSEC_FRAMES = 30
+EYE_AR_THRESH = 0.25
+EYE_AR_CONSEC_FRAMES = 20
  
 # initialize the frame counter as well as a boolean used to
 # indicate if the alarm is going off
