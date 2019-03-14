@@ -85,7 +85,7 @@ def video_blink(file):
     COUNTER = 0
     ALARM_ON = False
     
-    vs = FileVideoStream(file).start()
+    vs = VideoStream(usePiCamera=True).start()
     fileStream = True
     state = ''
 
