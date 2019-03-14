@@ -32,9 +32,9 @@ def eye_aspect_ratio(eye):
     # return the eye aspect ratio
     return ear
 
-
+###TEST
 ap = {}
-ap['shape_predictor'] = 'shape_predictor_68_face_landmarks.dat'
+ap['shape_predictor'] = './var/tander/rbcv/model/dlib-models/shape_predictor_68_face_landmarks.dat'
 #args = vars(ap.parse_args())
 ap['alarm'] = 'WOWSENSOR-HIT.wav'
 args = ap 
@@ -52,8 +52,9 @@ ALARM_ON = False
 a = []
 r = []
 
-print("[INFO] loading facial landmark predictor...")
+print ("[INFO] loading facial landmark predictor...")
 detector = dlib.get_frontal_face_detector()
+print (args["shape_predictor"])
 predictor = dlib.shape_predictor(args["shape_predictor"])
 
 
