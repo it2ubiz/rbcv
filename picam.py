@@ -7,7 +7,7 @@ camera = PiCamera()
 camera.start_preview()
  
 # 10 секунд смотрим на экран
-sleep(10)
+#sleep(10)
  
 # Выключаем предпросмотр
-camera.stop_preview()
+#camera.stop_preview()
